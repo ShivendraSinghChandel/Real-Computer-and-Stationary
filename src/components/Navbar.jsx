@@ -158,7 +158,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+      <div className={`md:hidden transition-all duration-300 ${isOpen ? 'max-h-[80vh] overflow-y-auto opacity-100' : 'max-h-0 overflow-hidden opacity-0'}`}>
         <div className="bg-white border-t shadow-lg px-4 py-4 space-y-2">
           {navLinks.map((link) => (
             <Link key={link.path} to={link.path} onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-lg font-medium transition-colors ${isActive(link.path) ? 'bg-primary-600 text-white' : 'text-gray-700 hover:bg-gray-100'}`}>
