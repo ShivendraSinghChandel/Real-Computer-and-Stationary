@@ -26,7 +26,7 @@ const Footer = () => {
               <img 
                 src="/logo.png" 
                 alt="Real Computer & Stationary" 
-                className="h-16 sm:h-20 w-auto object-contain bg-white/10 rounded-xl p-2"
+                className="h-20 sm:h-24 w-auto object-contain bg-white/10 rounded-xl p-2"
               />
             </Link>
             <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
