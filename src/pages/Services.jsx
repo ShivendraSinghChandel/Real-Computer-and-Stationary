@@ -5,6 +5,7 @@ import {
   ArrowRight, CheckCircle, Phone
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 
 const Services = () => {
   const { t } = useLanguage();
@@ -81,7 +82,14 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden pt-20">
+    <>
+      <SEO 
+        title="Government Services - MP Online, PAN Card, Land Documents"
+        description="Complete range of government services in Sidhi, MP - MP Online certificates, PAN card applications, land documents (Khasra/Khatauni), college form filling, AEPS money withdrawal. Trusted by 10,000+ customers."
+        keywords="MP Online services Sidhi, PAN card services Sidhi, land documents Sidhi, Khasra Khatauni Sidhi, college form filling Sidhi, AEPS Sidhi, character certificate Sidhi, driving license Sidhi"
+        path="/services"
+      />
+      <div className="min-h-screen w-full overflow-x-hidden pt-20">
       {/* Hero */}
       <section className="bg-gradient-hero text-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -104,7 +112,7 @@ const Services = () => {
             <div key={categoryIndex} className="mb-10 sm:mb-14 lg:mb-16 last:mb-0">
               {/* Category Header */}
               <div className="flex items-center gap-3 sm:gap-4 mb-5 sm:mb-8">
-                <div className={`w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gradient-to-r ${category.color} rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg flex-shrink-0`}>
+                <div className={`w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-linear-to-r ${category.color} rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg shrink-0`}>
                   <category.icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-white" />
                 </div>
                 <div>
@@ -118,7 +126,7 @@ const Services = () => {
                 {category.services.map((service, serviceIndex) => (
                   <div key={serviceIndex} className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-5 lg:p-6 shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
                     <div className="flex items-start gap-3 sm:gap-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-primary-100 transition-colors flex-shrink-0">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-primary-100 transition-colors shrink-0">
                         <service.icon className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 group-hover:text-primary-600 transition-colors" />
                       </div>
                       <div className="flex-1 min-w-0">
@@ -148,7 +156,7 @@ const Services = () => {
       {/* Pricing Note */}
       <section className="py-10 sm:py-14 lg:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-gradient-to-r from-primary-50 to-purple-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 border border-primary-100">
+          <div className="bg-linear-to-r from-primary-50 to-purple-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 border border-primary-100">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
               {t.services.transparentPricing}
             </h2>
@@ -182,6 +190,7 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

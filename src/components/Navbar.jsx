@@ -95,7 +95,7 @@ const Navbar = () => {
               </button>
               
               {langDropdownOpen && (
-                <div className="absolute right-0 top-full mt-1 w-36 bg-white rounded-xl shadow-2xl border border-gray-200 py-1 z-[100]">
+                <div className="absolute right-0 top-full mt-1 w-36 bg-white rounded-xl shadow-2xl border border-gray-200 py-1 z-100">
                   {availableLanguages.map((lang) => (
                     <button
                       key={lang}
@@ -134,7 +134,7 @@ const Navbar = () => {
               </button>
               
               {langDropdownOpen && (
-                <div className="absolute right-0 top-full mt-1 w-36 bg-white rounded-xl shadow-2xl border border-gray-200 py-1 z-[100]">
+                <div className="absolute right-0 top-full mt-1 w-36 bg-white rounded-xl shadow-2xl border border-gray-200 py-1 z-100">
                   {availableLanguages.map((lang) => (
                     <button
                       key={lang}

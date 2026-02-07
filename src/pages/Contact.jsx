@@ -1,6 +1,7 @@
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import { useLanguage } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -20,7 +21,14 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden pt-20">
+    <>
+      <SEO 
+        title="Contact Us - Visit Our Shop in Padainiya Khurd, Sidhi"
+        description="Contact Real Computer & Stationary in Sidhi, MP. Address: Padainiya Khurd, Sidhi, MP 486661. Phone: +91 78793 76949. Open Mon-Sun 9AM-9PM. Get directions and inquire about our services."
+        keywords="Real Computer contact, Sidhi MP shop location, Padainiya Khurd Sidhi, MP Online center near me, stationary shop near Sidhi"
+        path="/contact"
+      />
+      <div className="min-h-screen w-full overflow-x-hidden pt-20">
       {/* Hero */}
       <section className="bg-gradient-hero text-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -107,6 +115,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -4,6 +4,7 @@ import {
   ArrowRight, CheckCircle, Users, Clock, Shield, Star
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 
 const Home = () => {
   const { t } = useLanguage();
@@ -25,7 +26,14 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden">
+    <>
+      <SEO 
+        title="MP Online Services, PAN Card & Stationary Shop in Sidhi"
+        description="Real Computer & Stationary - Your trusted partner in Sidhi, MP for MP Online government services, PAN card applications, land documents, college forms, AEPS money withdrawal & quality stationary products. 10+ years of service."
+        keywords="MP Online Sidhi, PAN card Sidhi, stationary shop Sidhi, government services Sidhi MP, character certificate Sidhi, land documents Sidhi, Real Computer Sidhi"
+        path="/"
+      />
+      <div className="min-h-screen w-full overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-hero overflow-hidden flex items-center">
         <div className="absolute inset-0 opacity-10">
@@ -43,7 +51,7 @@ const Home = () => {
               
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 {t.home.heroTitle1}
-                <span className="block text-transparent bg-gradient-to-r from-primary-300 to-purple-400 bg-clip-text">{t.home.heroTitle2}</span>
+                <span className="block text-transparent bg-linear-to-r from-primary-300 to-purple-400 bg-clip-text">{t.home.heroTitle2}</span>
               </h1>
               
               <p className="text-base sm:text-lg text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
@@ -104,7 +112,7 @@ const Home = () => {
                 <ul className="space-y-1.5 sm:space-y-2 mb-4">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-gray-700">
-                      <div className="w-1.5 h-1.5 bg-primary-500 rounded-full flex-shrink-0"></div>{feature}
+                      <div className="w-1.5 h-1.5 bg-primary-500 rounded-full shrink-0"></div>{feature}
                     </li>
                   ))}
                 </ul>
@@ -139,7 +147,7 @@ const Home = () => {
                   { title: t.home.oneStopSolution, desc: t.home.oneStopSolutionDesc }
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3 sm:gap-4 text-left">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-100 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-100 rounded-lg sm:rounded-xl flex items-center justify-center shrink-0">
                       <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
                     </div>
                     <div>
@@ -157,11 +165,11 @@ const Home = () => {
                 <p className="text-white/80 mb-4 sm:mb-6 text-sm sm:text-base">{t.home.getStartedDesc}</p>
                 <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                   <div className="flex items-center gap-3 text-sm sm:text-base">
-                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-primary-300 flex-shrink-0" />
+                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-primary-300 shrink-0" />
                     <span>{t.home.workingHours}</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm sm:text-base">
-                    <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-primary-300 flex-shrink-0" />
+                    <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-primary-300 shrink-0" />
                     <span>{t.home.genuineService}</span>
                   </div>
                 </div>
@@ -197,6 +205,7 @@ const Home = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

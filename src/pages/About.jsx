@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Monitor, Target, Eye, Users, Award, Clock, MapPin, Phone, Mail, ArrowRight, Heart } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 
 const About = () => {
   const { t } = useLanguage();
@@ -13,7 +14,14 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden pt-20">
+    <>
+      <SEO 
+        title="About Us - 10+ Years Trusted Service in Sidhi"
+        description="Real Computer & Stationary has been serving Sidhi, MP since 2014. Trusted by 10,000+ customers for MP Online services, PAN cards, land documents & stationary. Government authorized center."
+        keywords="Real Computer Sidhi, about Real Computer, trusted service center Sidhi, MP Online center Sidhi, government authorized Sidhi"
+        path="/about"
+      />
+      <div className="min-h-screen w-full overflow-x-hidden pt-20">
       {/* Hero */}
       <section className="bg-gradient-hero text-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,14 +42,14 @@ const About = () => {
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
-            <div className="bg-gradient-to-br from-primary-50 to-purple-50 rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-8 border border-primary-100">
+            <div className="bg-linear-to-br from-primary-50 to-purple-50 rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-8 border border-primary-100">
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary-600 rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-6">
                 <Target className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
               </div>
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{t.about.ourMission}</h2>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{t.about.missionDesc}</p>
             </div>
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-8 border border-amber-100">
+            <div className="bg-linear-to-br from-amber-50 to-orange-50 rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-8 border border-amber-100">
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-accent-500 rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-6">
                 <Eye className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
               </div>
@@ -80,25 +88,25 @@ const About = () => {
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">{t.about.findShop}</h2>
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex items-start gap-3 sm:gap-4 text-left">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-lg sm:rounded-xl flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600" />
                   </div>
                   <div><h4 className="font-semibold text-sm sm:text-base">{t.about.address}</h4><p className="text-gray-600 text-xs sm:text-sm">{t.about.addressValue}</p></div>
                 </div>
                 <div className="flex items-start gap-3 sm:gap-4 text-left">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-lg sm:rounded-xl flex items-center justify-center shrink-0">
                     <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600" />
                   </div>
                   <div><h4 className="font-semibold text-sm sm:text-base">{t.about.hours}</h4><p className="text-gray-600 text-xs sm:text-sm">{t.about.hoursValue}</p></div>
                 </div>
                 <div className="flex items-start gap-3 sm:gap-4 text-left">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-lg sm:rounded-xl flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600" />
                   </div>
                   <div><h4 className="font-semibold text-sm sm:text-base">{t.about.phone}</h4><a href="tel:+917879376949" className="text-primary-600 text-xs sm:text-sm">+91 78793 76949</a></div>
                 </div>
                 <div className="flex items-start gap-3 sm:gap-4 text-left">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-lg sm:rounded-xl flex items-center justify-center shrink-0">
                     <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600" />
                   </div>
                   <div><h4 className="font-semibold text-sm sm:text-base">{t.about.email}</h4><a href="mailto:pariharrishabh55@gmail.com" className="text-primary-600 text-xs sm:text-sm">pariharrishabh55@gmail.com</a></div>
@@ -131,6 +139,7 @@ const About = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

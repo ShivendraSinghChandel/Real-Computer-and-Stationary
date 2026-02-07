@@ -1,0 +1,14 @@
+# Robots.txt for Real Computer & Stationary
+# https://realcomputer.in
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://real-computer-and-stationary.vercel.app/sitemap.xml
+
+# Crawl-delay (optional, for polite crawling)
+Crawl-delay: 1
+
+# Disallow admin or private paths (none currently)
+# Disallow: /admin/

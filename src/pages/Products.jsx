@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Search, Package, Phone, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 
 const Products = () => {
   const { t } = useLanguage();
@@ -50,7 +51,14 @@ const Products = () => {
   });
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden pt-20">
+    <>
+      <SEO 
+        title="Stationary Products - Pens, Notebooks, Office Supplies"
+        description="Quality stationary products in Sidhi, MP - Pens, pencils, notebooks, office supplies, art materials at competitive prices. Bulk orders welcome for schools and offices. Real Computer & Stationary."
+        keywords="stationary shop Sidhi, pens Sidhi, notebooks Sidhi, office supplies Sidhi MP, school supplies Sidhi, bulk stationary Sidhi"
+        path="/products"
+      />
+      <div className="min-h-screen w-full overflow-x-hidden pt-20">
       {/* Hero */}
       <section className="bg-gradient-hero text-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -109,7 +117,7 @@ const Products = () => {
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-6">
                 {filteredProducts.map((product, index) => (
                   <div key={index} className="bg-white rounded-xl p-3 sm:p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
-                    <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-50 rounded-lg mb-3 flex items-center justify-center">
+                    <div className="aspect-square bg-linear-to-br from-gray-100 to-gray-50 rounded-lg mb-3 flex items-center justify-center">
                       <Package className="w-10 h-10 sm:w-12 sm:h-12 text-gray-300 group-hover:text-primary-400 transition-colors" />
                     </div>
                     <h3 className="font-semibold text-gray-900 text-xs sm:text-sm mb-1 line-clamp-2 group-hover:text-primary-600 transition-colors">{product.name}</h3>
@@ -151,6 +159,7 @@ const Products = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
